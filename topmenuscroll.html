@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Como criar o efeito parallax com css</title>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.links{
+			width: 100vw;
+			height: 50px;
+			position: fixed;	
+			display: flex;
+		}
+
+		.links label{
+			padding: 10px 0;
+			flex-grow: 1;
+			cursor: pointer;
+			transition: all .4s;
+			text-align: center;
+			font-family: 'Arial';
+			font-size: 100%;
+			color: #fff;
+		}
+
+		.links label:hover{
+			 background-color: rgba(255,255,255, .2);
+		}
+
+		.scroll input{
+			display: none;
+		}
+
+		.bloco{
+			width: 100vw;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+
+		.bloco img{
+			width: 40%;
+			height: 40%;
+		}
+
+		#historia{
+			background-color: #7fbd42;
+		}
+		#artistas{
+			background-color: #69f;
+		}
+		#eventos{
+			background-color: #faa;
+		}
+		#agendamento{
+			background-color: #aaa;
+		}
+		#equipe{
+			background-color: #414950;
+		}
+
+		.scroll{
+			display: flex;
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.sections{
+			transition: all .4s;
+		}
+
+		#rd_artista:checked ~ .sections{
+			margin-top: -100vh;
+		}
+
+		#rd_eventos:checked ~ .sections{
+			margin-top: -200vh;
+		}
+
+		#rd_agendamento:checked ~ .sections{
+			margin-top: -300vh;
+		}
+
+		#rd_equipe:checked ~ .sections{
+			margin-top: -400vh;
+		}
+
+
+	</style>
+</head>
+<body>
+	<nav class="links">
+		<label for="rd_historia">História</label>
+		<label for="rd_artista">Artistas</label>
+		<label for="rd_eventos">Eventos</label>
+		<label for="rd_agendamento">Agendamento</label>
+		<label for="rd_equipe">Equipe</label>
+	</nav>
+
+	<div class="scroll">
+		<input type="radio" name="grupo" id="rd_historia" checked="true">
+		<input type="radio" name="grupo" id="rd_artista">
+		<input type="radio" name="grupo" id="rd_eventos">
+		<input type="radio" name="grupo" id="rd_agendamento">
+		<input type="radio" name="grupo" id="rd_equipe">
+
+
+		<section class="sections">
+			<section class="bloco" id="historia"></section>
+			<section class="bloco" id="artistas"></section>
+			<section class="bloco" id="eventos"></section>
+			<section class="bloco" id="agendamento"></section>
+			<section class="bloco" id="equipe"></section>
+
+		</section>
+ 
+	</div>
+	
+</body>
+</html>
