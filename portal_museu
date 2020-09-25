@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viweport" content="">
+	<title>Portal Mamulengo</title>
+
+
+
+
+	<style>
+		html {
+ 			 scroll-behavior: smooth;
+		}
+		/*  CLASSES  */
+
+		.fotos{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			width: fit-content;
+			height: fit-content;
+		}
+		.fotos img{
+			border-radius: 50%;
+		}
+
+		.header{
+			background-color: #f1f1f1;
+			-padding: 30px;
+			text-align: center;
+			border-style: groove;
+		}
+		.sticky {
+  			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.sticky + .content {
+  			padding-top: 60px;
+		}
+		.active{
+			background-color: green;
+		}
+
+
+
+		/*  ELEMENTOS  */
+		fieldset{
+			background-color: #F2F1DC;
+			border-style: groove;
+			border-radius: 10px;
+			width: fit-content;
+		}
+		label{
+			width: 200px;
+			display: inline-block;
+		}
+		div{
+			-border-style:dashed;
+			
+			display: block;
+			width: 100%;
+			-margin-bottom: 5vh;
+			-border-radius: 10px;
+		}
+		h1{
+			
+			-border-style: dotted;
+			width: 50%;
+			text-size-adjust:inherit;
+			color: inherit;
+		}
+		img{
+			width: 15%;
+			padding: 0;
+			margin-top: 10px;
+		}
+
+		form{
+			margin-left: 3%;
+		}
+		p{
+			text-align: justify;
+		}
+		nav{
+			position: relative;;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.432);
+			border-style: groove;
+			-padding: 20PX;
+			margin: 0;
+		}
+		body{
+			-background-color: black;
+			margin: 10px;
+			padding: 0;
+			color: black;
+			font-size: 20px;
+		}
+
+		
+
+		/*  IDS   background-color: #A60F0F ;*/
+		#historia{
+			-background-color: #black;
+		}
+		#artista{
+			-background-color: #black;
+		}
+		#agendamento{
+			-background-color: #black;
+		}
+		#equipe{
+			-background-color: #black ;
+			
+		}
+		#navbar {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		#navbar a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		#navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+	
+	</style>
+</head>
+
+
+<body>
+<a name="inicio" id="inicio"></a>
+
+<div class="header">
+	<h2>MUSEU DO MAMULENGO</h2>
+	<h3>Espaco Tirida</h3>
+</div>
+
+<!--BARRA DE NAVEGACAO-->
+<div id="navbar">
+	<a class="active" href="#inicio">Início</a>
+	<a href="#historia">História</a>
+	<a href="#artistas">Artistas</a>
+	<a href="#equipe">Equipe</a>
+  </div>
+
+
+
+
+<div class="content">
+
+	
+		
+	<!--HISTORIA-->
+	<a name="historia" id="historia"></a>
+		<br><br><br>
+		<div id="historia"><h1>Historia</h1>
+			<div><p>Tem três coisas que precisam ser ditas: 1) embora seja interessante e diferente, o programa não é maravilhoso. Na
+				verdade, é um daqueles que TODO roteiro inclui, mas a gente não achou imperdível. Gostamos de ter visitado, até
+				mesmo pelo passeio (já que fica fora da cidade), mas não tem nada demais. Como li na internet que várias pessoas
+				amaram, não me atrevo a dizer pra deixarem de ir kkkkkkk mas se eu tivesse dois dias só em Bogota, por exemplo,
+				eu não iria; 2) Escolha o ingresso mais simples, pq tem uns q são mais caros pq incluem umas besteiras sem
+				tamanho; 3) por pura comodidade, a gente terminou fazendo o passeio com um motorista do hotel (todos os
+				hotéis lá tem “carros do hotel” que nada mais é do que táxi privado, só que mais caro). Pagamos 140 mil pesos (no
+				total) e o motorista nos levou na catedral (ficou esperando lá), nos levou pra almoçar num restaurante típico
+				(almoço não incluso), deu uma volta rápida no povoado e nos levou de volta ao hotel. Acontece que achei a o
+				povoado bem bonitinho e gostaria de ter andado mais pelas ruazinhas. Também acho que poderíamos ter
+				escolhido um outro restaurante pq o que ele levou a gente achei bem pega-turista. Então acho que teria sido
+				melhor (e mais barato) pegar um ônibus e ter ido por conta própria, como uns amigos fizeram. Na internet achei
+				isso:
+				– ir até o terminal de ônibus de Bogotá (http://www.terminaldetransporte.gov.co/), acessar o módulo 3
+				(vermelho) e pegar o ônibus com destino a Zipaquirá. O trajeto do terminal de ônibus até a cidade de Zipaquirá
+				demora cerca de 1h30min e o preço é de $4.300 (valor de Junho/2014). O problema deste trajeto é que você
+				precisará chegar ao terminal de ônibus de Bogotá que não possui estação do Transmilenio próxima. (É só pegar um
+				táxi até o Portal del Norte na ida, pegar o ônibus na rua mesmo, descer na rodoviaria de Zipaquirá e depois pegar
+				outro táxi até a Catedral. Custou 5000 pesos o táxi. Na volta, pegue o táxi, vá à rodoviária, pegue qualquer ônibus
+				para Bogotá e desça na última estação... Mais fácil, impossível!).
+				– ir até o Portal del Norte (linha B do sistema Transmilenio), acessar a plataforma 2 sul e pegar o ônibus com
+				destino a Zipaquirá. O trajeto do Portal del Norte até a cidade de Zipaquirá demora cerca de 45min e o preço é de
+				$4.300 (valor de Junho/2014). Na nossa opinião, esta é a melhor maneira de chegar até o local.
+				Chegando em Zipaquirá,vale a pena pedir para o motorista te deixar no ponto mais próximo da catedral já que o
+				transporte não passa pela entrada. Depois de descer você pode pegar</p></div>
+		
+		
+		</div>
+	<!--ARTISTAS-->
+		<a name="artistas" id="artistas"></a>
+		<br><br><br>
+		<div id="artista"><h1>Artistas</h1>
+
+			<div class="fotos">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+					<img src="quiteriaquadrada.jpg">
+			</div>
+		</div>
+
+		<!--EVENTOS-->
+		<div id="artista"><h1>Artistas</h1>
+
+			<H1>TRABALHAR COM CARDS</H1>
+		</div>
+	
+	
+	<!--AGENDAMENTO-->
+		<div id="agendamento"><h1>Agendamento de Escolas</h1>
+			<form action="agendamento.php" method="post">
+				<fieldset>
+
+				
+				<label for="nome_escola">Nome da Escola: </label> <input type="text" name="nome_escola">
+				<br><br>
+				<label for="quantidade_alunos">Quantidade de Alunos: </label><input type="number" name="quantidade_alunos">
+				<br><br>
+				<label for="data_visita">Data: </label><input type="date" name="data_visita">
+				<br><br>
+				<label for="hora_visita">Horário da Visita: </label><input type="time" name="hora_visita">
+				<br><br>
+				<label for="data_visita">Escolaridade: </label>
+					<select name="escolaridade" id="simbora">
+						<option value="infantil">Infantil</option>
+						<option value="fundamental1">Fundamental I</option>
+						<option value="fundamental2">Fundamental II</option>
+						<option value="ensino_medio">Ensino Médio</option>
+					</select>
+				<br><br>
+				<input type="submit">
+				<input type="reset">
+			</fieldset>
+			</form>
+		</div>
+
+	<!--EQUIPE-->
+	<a name="equipe" id="equipe"></a>
+	<div id="equipe"><h1>EQUIPE</h1>
+		<div class="fotos">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+	</div>
+		
+		
+	</div>
+
+		
+</div>	
+
+
+
+
+
+
+
+<script>
+	window.onscroll = function() {myFunction()};
+	
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+	
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+	  } else {
+		navbar.classList.remove("sticky");
+	  }
+	}
+	</script>
+</body>
+</html>
