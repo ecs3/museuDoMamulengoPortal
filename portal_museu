@@ -15,10 +15,10 @@
 		/*  CLASSES  */
 
 		.fotos{
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			width: fit-content;
+			display:inline-flex ;
+			flex-wrap:wrap;
+			justify-content:space-between;
+			width: 100%;
 			height: fit-content;
 		}
 		.fotos img{
@@ -42,15 +42,19 @@
 		}
 		.active{
 			background-color: green;
+			border-radius: 10px;
 		}
+
+	
 
 
 
 		/*  ELEMENTOS  */
 		fieldset{
 			background-color: #F2F1DC;
-			border-style: groove;
 			border-radius: 10px;
+			margin: 0 auto;
+			border-style: none;
 			width: fit-content;
 		}
 		label{
@@ -58,16 +62,12 @@
 			display: inline-block;
 		}
 		div{
-			-border-style:dashed;
 			
 			display: block;
 			width: 100%;
-			-margin-bottom: 5vh;
-			-border-radius: 10px;
+			
 		}
 		h1{
-			
-			-border-style: dotted;
 			width: 50%;
 			text-size-adjust:inherit;
 			color: inherit;
@@ -76,6 +76,13 @@
 			width: 15%;
 			padding: 0;
 			margin-top: 10px;
+			transition: border-radius .5s;
+			-transition: transform 0.8s;
+		}
+		img:hover{
+			-transform: rotateY(180deg);
+			
+			border-radius: 20%;
 		}
 
 		form{
@@ -85,12 +92,13 @@
 			text-align: justify;
 		}
 		nav{
-			position: relative;;
+			position: relative;
 			width: 100%;
 			background-color: rgba(255, 255, 255, 0.432);
 			border-style: groove;
-			-padding: 20PX;
+			z-index: 9999;
 			margin: 0;
+			border-radius: 10px;
 		}
 		body{
 			-background-color: black;
@@ -104,13 +112,14 @@
 
 		/*  IDS   background-color: #A60F0F ;*/
 		#historia{
+			
 			-background-color: #black;
 		}
 		#artista{
 			-background-color: #black;
 		}
 		#agendamento{
-			-background-color: #black;
+			background-color: #black;
 		}
 		#equipe{
 			-background-color: #black ;
@@ -119,6 +128,7 @@
 		#navbar {
 			overflow: hidden;
 			background-color: #333;
+			border-radius: 10px;
 		}
 
 		#navbar a {
@@ -132,10 +142,13 @@
 		}
 		#navbar a:hover {
 			background-color: #ddd;
+			border-radius: 10px	;
 			color: black;
 		}
 	
 	</style>
+
+	
 </head>
 
 
@@ -198,28 +211,36 @@
 		<a name="artistas" id="artistas"></a>
 		<br><br><br>
 		<div id="artista"><h1>Artistas</h1>
+			<div class="fotos">	
+				<img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg">
+				<img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg">
+				<img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg">
 
-			<div class="fotos">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
-					<img src="quiteriaquadrada.jpg">
+
 			</div>
-		</div>
+
+
+			</div>
 
 		<!--EVENTOS-->
 		<div id="artista"><h1>Artistas</h1>
 
 			<H1>TRABALHAR COM CARDS</H1>
 		</div>
+
+		<!--EQUIPE-->
+	<a name="equipe" id="equipe"></a>
+	<div id="equipe"><h1>EQUIPE</h1>
+		<div class="fotos">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+			<img src="avatar.jpg">
+	</div>
+		
+		
+	</div>
 	
 	
 	<!--AGENDAMENTO-->
@@ -250,19 +271,7 @@
 			</form>
 		</div>
 
-	<!--EQUIPE-->
-	<a name="equipe" id="equipe"></a>
-	<div id="equipe"><h1>EQUIPE</h1>
-		<div class="fotos">
-			<img src="avatar.jpg">
-			<img src="avatar.jpg">
-			<img src="avatar.jpg">
-			<img src="avatar.jpg">
-			<img src="avatar.jpg">
-	</div>
-		
-		
-	</div>
+	
 
 		
 </div>	
