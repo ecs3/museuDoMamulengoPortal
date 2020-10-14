@@ -6,147 +6,15 @@
 	<title>Portal Mamulengo</title>
 
 
-
-
-	<style>
-		html {
- 			 scroll-behavior: smooth;
-		}
-		/*  CLASSES  */
-
-		.fotos{
-			display:inline-flex ;
-			flex-wrap:wrap;
-			justify-content:space-between;
-			width: 100%;
-			height: fit-content;
-		}
-		.fotos img{
-			border-radius: 50%;
-		}
-
-		.header{
-			background-color: #f1f1f1;
-			-padding: 30px;
-			text-align: center;
-			border-style: groove;
-		}
-		.sticky {
-  			position: fixed;
-			top: 0;
-			width: 100%;
-		}
-
-		.sticky + .content {
-  			padding-top: 60px;
-		}
-		.active{
-			background-color: green;
-			border-radius: 10px;
-		}
-
+	<link rel="stylesheet" href="/lib/w3.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="portal_museu.css" media="screen" />
 	
-
-
-
-		/*  ELEMENTOS  */
-		fieldset{
-			background-color: #F2F1DC;
-			border-radius: 10px;
-			margin: 0 auto;
-			border-style: none;
-			width: fit-content;
-		}
-		label{
-			width: 200px;
-			display: inline-block;
-		}
-		div{
-			
-			display: block;
-			width: 100%;
-			
-		}
-		h1{
-			width: 50%;
-			text-size-adjust:inherit;
-			color: inherit;
-		}
-		img{
-			width: 15%;
-			padding: 0;
-			margin-top: 10px;
-			transition: border-radius .5s;
-			-transition: transform 0.8s;
-		}
-		img:hover{
-			-transform: rotateY(180deg);
-			
-			border-radius: 20%;
-		}
-
-		form{
-			margin-left: 3%;
-		}
-		p{
-			text-align: justify;
-		}
-		nav{
-			position: relative;
-			width: 100%;
-			background-color: rgba(255, 255, 255, 0.432);
-			border-style: groove;
-			z-index: 9999;
-			margin: 0;
-			border-radius: 10px;
-		}
-		body{
-			-background-color: black;
-			margin: 10px;
-			padding: 0;
-			color: black;
-			font-size: 20px;
-		}
-
-		
-
-		/*  IDS   background-color: #A60F0F ;*/
-		#historia{
-			
-			-background-color: #black;
-		}
-		#artista{
-			-background-color: #black;
-		}
-		#agendamento{
-			background-color: #black;
-		}
-		#equipe{
-			-background-color: #black ;
-			
-		}
-		#navbar {
-			overflow: hidden;
-			background-color: #333;
-			border-radius: 10px;
-		}
-
-		#navbar a {
-			float: left;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-		}
-		#navbar a:hover {
-			background-color: #ddd;
-			border-radius: 10px	;
-			color: black;
-		}
+<style>html {
+	background-color: white;
+	  scroll-behavior: smooth;
+}</style>
 	
-	</style>
 
 	
 </head>
@@ -163,9 +31,12 @@
 <!--BARRA DE NAVEGACAO-->
 <div id="navbar">
 	<a class="active" href="#inicio">Início</a>
+	<a href="#agendamento">Agendamento</a>
 	<a href="#historia">História</a>
+	<a href="#eventos">Eventos</a>
 	<a href="#artistas">Artistas</a>
 	<a href="#equipe">Equipe</a>
+	
   </div>
 
 
@@ -173,64 +44,206 @@
 
 <div class="content">
 
+	<!--AGENDAMENTO-->
+	<a name="agendamento" id="agendamento"></a>
+		<br><br><br>
+		<div id="agendamento"><h1>Agendamento de Grupos</h1>
+			<form action="agendamento.php" method="post">
+				<fieldset>
+
+				
+				<label for="nome_escola">Nome do Grupo: </label> <input type="text" name="nome_escola">
+				<br><br>
+				<label for="quantidade_alunos">Quantidade de Alunos: </label><input type="number" name="quantidade_alunos">
+				<br><br>
+				<label for="data_visita">Data: </label><input type="date" name="data_visita">
+				<br><br>
+				<label for="hora_visita">Horário da Visita: </label><input type="time" name="hora_visita">
+				<br><br>
+				<label for="data_visita">Fase escolar: </label>
+					<select name="escolaridade" id="simbora">
+						<option value="infantil">Infantil</option>
+						<option value="fundamental1">Fundamental I</option>
+						<option value="fundamental2">Fundamental II</option>
+						<option value="ensino_medio">Ensino Médio</option>
+						<option value="ensino_medio">Ensino Superior</option>
+					</select>
+				<br><br>
+				
+				<button class="w3-btn w3-green" type="submit"> ok </button>
+				<input type="reset">
+			</fieldset>
+			</form>
+		</div>
+
 	
 		
 	<!--HISTORIA-->
 	<a name="historia" id="historia"></a>
 		<br><br><br>
 		<div id="historia"><h1>Historia</h1>
-			<div><p>Tem três coisas que precisam ser ditas: 1) embora seja interessante e diferente, o programa não é maravilhoso. Na
-				verdade, é um daqueles que TODO roteiro inclui, mas a gente não achou imperdível. Gostamos de ter visitado, até
-				mesmo pelo passeio (já que fica fora da cidade), mas não tem nada demais. Como li na internet que várias pessoas
-				amaram, não me atrevo a dizer pra deixarem de ir kkkkkkk mas se eu tivesse dois dias só em Bogota, por exemplo,
-				eu não iria; 2) Escolha o ingresso mais simples, pq tem uns q são mais caros pq incluem umas besteiras sem
-				tamanho; 3) por pura comodidade, a gente terminou fazendo o passeio com um motorista do hotel (todos os
-				hotéis lá tem “carros do hotel” que nada mais é do que táxi privado, só que mais caro). Pagamos 140 mil pesos (no
-				total) e o motorista nos levou na catedral (ficou esperando lá), nos levou pra almoçar num restaurante típico
-				(almoço não incluso), deu uma volta rápida no povoado e nos levou de volta ao hotel. Acontece que achei a o
-				povoado bem bonitinho e gostaria de ter andado mais pelas ruazinhas. Também acho que poderíamos ter
-				escolhido um outro restaurante pq o que ele levou a gente achei bem pega-turista. Então acho que teria sido
-				melhor (e mais barato) pegar um ônibus e ter ido por conta própria, como uns amigos fizeram. Na internet achei
-				isso:
-				– ir até o terminal de ônibus de Bogotá (http://www.terminaldetransporte.gov.co/), acessar o módulo 3
-				(vermelho) e pegar o ônibus com destino a Zipaquirá. O trajeto do terminal de ônibus até a cidade de Zipaquirá
-				demora cerca de 1h30min e o preço é de $4.300 (valor de Junho/2014). O problema deste trajeto é que você
-				precisará chegar ao terminal de ônibus de Bogotá que não possui estação do Transmilenio próxima. (É só pegar um
-				táxi até o Portal del Norte na ida, pegar o ônibus na rua mesmo, descer na rodoviaria de Zipaquirá e depois pegar
-				outro táxi até a Catedral. Custou 5000 pesos o táxi. Na volta, pegue o táxi, vá à rodoviária, pegue qualquer ônibus
-				para Bogotá e desça na última estação... Mais fácil, impossível!).
-				– ir até o Portal del Norte (linha B do sistema Transmilenio), acessar a plataforma 2 sul e pegar o ônibus com
-				destino a Zipaquirá. O trajeto do Portal del Norte até a cidade de Zipaquirá demora cerca de 45min e o preço é de
-				$4.300 (valor de Junho/2014). Na nossa opinião, esta é a melhor maneira de chegar até o local.
-				Chegando em Zipaquirá,vale a pena pedir para o motorista te deixar no ponto mais próximo da catedral já que o
-				transporte não passa pela entrada. Depois de descer você pode pegar</p></div>
+			<div><p>Inaugurado em 14 de dezembro de 1994, na Rua do Amparo nº 59 - Amparo/Olinda/PE, em um prédio com características ecléticas da arquitetura do
+				 fim do século XIX, em estilo colonial, adquirido pela Fundação Pró-Memória e IPHAN em 15 de agosto de 1984.
+
+				<br>O MUSEU DO MAMULENGO - ESPAÇO TIRIDÁ, é um espaço artístico, lúdico e mágico. Artístico pela quantidade e qualidade de seu maravilhoso acervo 
+				(aproximadamente 1.200 bonecos antigos e contemporâneos), lúdico pelo que oferece ao seu público e mágico porque através dos bonecos o visitante ou 
+				quisador diversificado penetra num mundo livre e provocador, com uma linguagem própria. Devido a problemas estruturais na sede do Museu, onde apareceram 
+				rachaduras nas paredes pela acomodação do terreno e excesso de águas subterrâneas, o Museu do Mamulengo, passa a funcionar, a partir de setembro de 2006, 
+				na Rua de São Bento nº 344 - Ribeira/Olinda/PE. Como primeiro museu de bonecos populares do Brasil e da América Latina, divulga o mamulengo e sua tradição 
+				como teatro de bonecos da região, singular e expressivo. A criação do principal acervo do Museu do Mamulengo surgiu na década de 70, quando os participantes 
+				do Grupo Mamulengo Só-riso, resolveram investir na aquisição de peças dos "mestres mamulengueiros" que falecendo e sem deixar herdeiros de sua arte eram 
+				vendidas como peças de decoração.</p></div>
 		
 		
 		</div>
-	<!--ARTISTAS-->
+	<!--EVENTOS-->
+		<a name="eventos" id="eventos"></a>
+		<br><br><br>
+		<div id="eventos"><h1>Eventos</h1>
+			
+		
+				
+				<div id="carteira">
+				
+					<div class="event">
+						<a href="#inicio">
+						<img src="/img/musaideias.png" alt="">
+						<h4 style="font-size: 1vw;">Musa de Ideias Ano 1 </h4></a>
+					</div>
+					<div class="event">
+						<img src="/img/primaveramuseu.png" alt="">
+						<h4 style="font-size: 1vw;">14ª Primavera dos Museus</h4>
+					</div>
+					<div class="event">
+						<a href="#inicio">
+							<img src="/img/oficinaboneco.png" alt="">
+						<h4 >Oficina de Bonecos com material Reciclavel</h4>
+						</a>
+					</div>
+					<div class="event">
+						<img src="/img/oficinacarimbo.png" alt="">
+						<h4 style="font-size: 1vw;">Oficina de Carimbos</h4>
+					</div>
+					<div class="event">
+						<img src="/img/diaintermuseu2019.png" alt="">
+						<h4 style="font-size: 1vw;">Dia Internacional de Museus 2019</h4>
+					</div>
+					<div class="event">
+						<img src="/img/diadofolclore.png" alt="">
+						<h4 style="font-size: 1vw;">Dia do Folclore 2020</h4>
+					</div>
+				</div>
+					<div id="carteira">
+					
+					<div class="event">
+						<img src="/img/confrafimdeano2018.png" alt="">
+						<h4 style="font-size: 1vw;">Fim de Anos 2018</h4>
+					</div>
+					<div class="event">
+						<img src="/img/citytour.png" alt="">
+						<h4 style="font-size: 1vw;">City Tour Olinda 2019</h4>
+					</div>
+					
+				</div>
+
+
+			
+
+
+			</div>
+
+		<!--ARTISTAS-->
 		<a name="artistas" id="artistas"></a>
 		<br><br><br>
-		<div id="artista"><h1>Artistas</h1>
-			<div class="fotos">	
-				<img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg">
-				<img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg">
-				<img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg"><img src="avatar.jpg">
+		<div id="artista_card"><h1>Artistas</h1>
 
-
+			<div id="carteira">
+				
+				<div class="cartoes">
+					<img src="IMG_4231.png" alt="">
+					<h4 style="font-size: 1vw;">Antonio Bilo</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Antonio Pequeno</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Bate Queixo</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Boca Rica</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Bonecarte</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Dadi</h4>
+				</div>
 			</div>
-
-
+				<div id="carteira">
+				
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Joao Nazario</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">José Justino</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">José Petronilo</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Juliao das Mascaras</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Luiz da Serra</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Manoel Marcelino</h4>
+				</div>
 			</div>
-
-		<!--EVENTOS-->
-		<div id="artista"><h1>Artistas</h1>
-
-			<H1>TRABALHAR COM CARDS</H1>
+			<div id="carteira">
+				
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Maurício Bonequeiro</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Maximiliano Dantas</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Pedro Rosa</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Salu</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Samuel Feira Nova</h4>
+				</div>
+				<div class="cartoes">
+					<img src="avatar.jpg" alt="">
+					<h4 style="font-size: 1vw;">Severino Bilu</h4>
+				</div>
+			</div>
 		</div>
 
 		<!--EQUIPE-->
 	<a name="equipe" id="equipe"></a>
-	<div id="equipe"><h1>EQUIPE</h1>
+		<br><br><br>
+	<div id="equipe"><h1>Equipe do Museu</h1>
 		<div class="fotos">
 			<img src="avatar.jpg">
 			<img src="avatar.jpg">
@@ -243,33 +256,7 @@
 	</div>
 	
 	
-	<!--AGENDAMENTO-->
-		<div id="agendamento"><h1>Agendamento de Escolas</h1>
-			<form action="agendamento.php" method="post">
-				<fieldset>
-
-				
-				<label for="nome_escola">Nome da Escola: </label> <input type="text" name="nome_escola">
-				<br><br>
-				<label for="quantidade_alunos">Quantidade de Alunos: </label><input type="number" name="quantidade_alunos">
-				<br><br>
-				<label for="data_visita">Data: </label><input type="date" name="data_visita">
-				<br><br>
-				<label for="hora_visita">Horário da Visita: </label><input type="time" name="hora_visita">
-				<br><br>
-				<label for="data_visita">Escolaridade: </label>
-					<select name="escolaridade" id="simbora">
-						<option value="infantil">Infantil</option>
-						<option value="fundamental1">Fundamental I</option>
-						<option value="fundamental2">Fundamental II</option>
-						<option value="ensino_medio">Ensino Médio</option>
-					</select>
-				<br><br>
-				<input type="submit">
-				<input type="reset">
-			</fieldset>
-			</form>
-		</div>
+	
 
 	
 
